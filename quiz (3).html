@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uz"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Iqtisodiyot va texnologiya — Test</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f4f7fb;--card:#fff;--tx:#14213d;--mu:#5b6b85;--ac:#1f4e79;--ok:#1e8e5a;--okb:#e0f5ea;--no:#c0392b;--nob:#fbe6e3;--bd:#d6dfeb;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1624;--card:#18233a;--tx:#e8eefb;--mu:#98a8c4;--ac:#6fb1f0;--ok:#4cd08f;--okb:#12382a;--no:#ff7b6b;--nob:#3d1d1a;--bd:#2c3b58;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1624;--card:#18233a;--tx:#e8eefb;--mu:#98a8c4;--ac:#6fb1f0;--ok:#4cd08f;--okb:#12382a;--no:#ff7b6b;--nob:#3d1d1a;--bd:#2c3b58;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.45;-webkit-user-select:none;user-select:none}
+input,select{-webkit-user-select:text;user-select:text}
+.w{max-width:560px;margin:0 auto;padding:18px 16px 40px}
+h1{font-size:1.2rem;margin:4px 0 2px;color:var(--ac)}
+.sub{color:var(--mu);font-size:.9rem}
+.bar{height:8px;background:var(--bd);border-radius:8px;overflow:hidden;margin:10px 0}
+.bar i{display:block;height:100%;background:var(--ac);width:0;transition:width .3s}
+.meta{display:flex;justify-content:space-between;color:var(--mu);font-size:.85rem;min-height:1.2em}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;margin-top:12px}
+.q{font-size:1.08rem;font-weight:600;margin:0 0 14px}
+.o{display:block;width:100%;text-align:left;font:inherit;color:var(--tx);background:var(--bg);border:1.5px solid var(--bd);border-radius:12px;padding:12px 14px;margin-bottom:9px;cursor:pointer}
+.o.sel{border-color:var(--ac);background:var(--bd)}
+.o b{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;background:var(--ac);color:var(--bg);margin-right:10px;font-size:.85rem}
+.btn{margin-top:14px;width:100%;padding:13px;border:0;border-radius:12px;background:var(--ac);color:var(--bg);font:inherit;font-weight:700;cursor:pointer}
+.btn:disabled{opacity:.5}
+.tm{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.tb{flex:1;height:12px;background:var(--bd);border-radius:12px;overflow:hidden}
+.tb i{display:block;height:100%;width:100%;background:var(--ok);border-radius:12px}
+.tn{font-weight:800;font-size:1.3rem;min-width:30px;text-align:right;color:var(--ac)}
+.tm.lo .tb i{background:var(--no)}.tm.lo .tn{color:var(--no)}
+label{display:block;font-weight:600;margin:12px 0 5px;font-size:.92rem}
+input,select{width:100%;font:inherit;padding:11px 12px;border-radius:10px;border:1.5px solid var(--bd);background:var(--bg);color:var(--tx)}
+.big{font-size:2.8rem;font-weight:800;text-align:center;color:var(--ac)}
+.c{text-align:center}
+.rv{border-top:1px solid var(--bd);padding:10px 0;font-size:.9rem;text-align:left}
+.rv .x{color:var(--no)}.rv .y{color:var(--ok)}
+.cp{background:var(--bg);border:1px dashed var(--bd);border-radius:10px;padding:10px;font-size:.88rem;margin-top:12px;-webkit-user-select:text;user-select:text;word-break:break-word}
+.note{background:var(--bg);border-left:4px solid var(--ac);padding:10px 12px;border-radius:8px;font-size:.88rem;margin-top:12px}
+</style></head><body oncontextmenu="return !window.running"><div class="w">
+<h1>🌏 Iqtisodiyot va texnologiya</h1>
+<div class="meta"><span id="n"></span><span id="s"></span></div>
+<div class="bar"><i id="b"></i></div>
+<div id="app"></div>
+</div>
+<script>
+/* Format: [savol, [variantlar], to‘g‘ri javob indeksi, izoh, variant raqami] */
+var Q=[
+/* ===== 1-VARIANT ===== */
+["2026-yil 2-chorak holatiga ko‘ra, dunyodagi kontrakt chip ishlab chiqarish bozorining 72,5 foizini qaysi kompaniya egallaydi?",["Samsung","TSMC","Intel","GlobalFoundries"],1,"Kontrakt chip ishlab chiqarish bozorining 72,5% i TSMC ga to‘g‘ri keladi.",1],
+["Dunyodagi sanoat robotlarining deyarli yarmini ishlab chiqaradigan davlat qaysi?",["Germaniya","Yaponiya","AQSH","Janubiy Koreya"],1,"Sanoat robototexnikasi Yaponiyaning jahondagi yetakchilik yo‘nalishidir.",1],
+["Singapur moliyaviy texnologiya markazlari orasida dunyoda nechanchi o‘rinda?",["1-o‘rin","2-o‘rin","3-o‘rin","5-o‘rin"],1,"Singapur fintex markazlari orasida jahonda 2-o‘rinda.",1],
+["2026-yil 2-chorak holatiga ko‘ra, dunyo DRAM xotira bozorining necha foizini Janubiy Koreyaning ikki kompaniyasi tashkil etadi?",["34%","44%","64%","84%"],2,"Samsung va SK Hynix dunyo DRAM bozorining 64% ini egallaydi.",1],
+["Xitoy WIPO Global Innovation Index 2026 da nechanchi o‘rinda?",["4-o‘rin","10-o‘rin","12-o‘rin","34-o‘rin"],1,"Xitoy kuchli o‘nlikka kirgan yagona o‘rta daromadli davlat.",1],
+["An’anaviy iqtisodiy modelda YAIM o‘sishining 70–80 foizi nimalarga bog‘liq bo‘lgan?",["Bilimlarni tijoratlashtirishga","Jismoniy kapital va ishchi kuchiga","Raqamli infratuzilmaga","Fintex va innovatsiyalarga"],1,"Innovatsion iqtisodiyotlarda esa o‘sishning 50% dan ortig‘i texnologik yangiliklarga to‘g‘ri keladi.",1],
+["Sun’iy intellekt ko‘nikmalarini talab qiluvchi ish o‘rinlari o‘rtadan past daromadli mamlakatlarda qanchaga o‘sgan?",["2%","11%","16%","54%"],1,"Yuqori daromadlilarda 2%, o‘rtadan past daromadlilarda 11%, o‘rtadan yuqori daromadlilarda 16%.",1],
+["Fintex (Fintech) so‘zi nimani anglatadi?",["Moliya va texnologiya uyg‘unligi","Faqat bank xizmatlari","Fond birjasi tizimi","Soliq va bojxona tizimi"],0,"Fintex — moliya (finance) va texnologiya (technology) so‘zlarining birikmasi.",1],
+["IMF ma’lumotlariga ko‘ra, Sharqiy Osiyo mintaqasining xarid qobiliyati pariteti (XQP) bo‘yicha YAIM hajmi necha trillion AQSH dollariga yetgan?",["12,40 trillion","26,15 trillion","41,00 trillion","58,64 trillion"],3,"Mintaqa YAIMi 58,64 trillion dollarga yetgan va jahon iqtisodiyotining 26,15% ini tashkil etadi.",1],
+["Global Innovation Index (GII) 2026 reytingida O‘zbekiston nechanchi o‘rinni egallagan?",["34-o‘rin","43-o‘rin","77-o‘rin","99-o‘rin"],2,"O‘zbekiston GII 2026 reytingida 77-o‘rinda.",1],
+["JSTning 2025-yilgi GVC hisobotiga ko‘ra, global savdo hajmining necha foizi an’anaviy to‘g‘ridan-to‘g‘ri ikki tomonlama savdo hissasiga to‘g‘ri keladi?",["16,3%","26,3%","46,3%","53,7%"],3,"GVC 46,3% ni tashkil etadi, qolgan 53,7% an’anaviy ikki tomonlama savdo.",1],
+["An’anaviy ikki tomonlama savdo nima?",["Uch davlat o‘rtasidagi qiymat zanjiri","Ikki davlat o‘rtasidagi uchinchi tomonsiz to‘g‘ridan-to‘g‘ri savdo","Faqat xomashyo eksporti","Bojxonasiz erkin savdo hududi"],1,"Bunda savdo faqat ikki davlat o‘rtasida, uchinchi tomonsiz amalga oshadi.",1],
+
+/* ===== 2-VARIANT ===== */
+["Mikrochiplar poytaxti qayer?",["Seul","Tokio","Tayvan","Singapur"],2,"Tayvan (TSMC orqali) eng ilg‘or mikrochiplarni ishlab chiqaradi.",2],
+["6 yil ketma-ket dunyoda eng ko‘p avtomobil sotgan kompaniya qaysi?",["Volkswagen","Toyota","Hyundai","Ford"],1,"Toyota 6 yil ketma-ket dunyo bo‘yicha eng ko‘p avtomobil sotgan kompaniya.",2],
+["Dunyoning eng yirik konteyner porti qaysi?",["Singapur","Rotterdam","Shanxay","Dubay"],2,"Dunyoning eng yirik konteyner porti — Shanxay.",2],
+["Singapur WIPO Global Innovation Index 2025 da nechanchi o‘rinda?",["2-o‘rin","5-o‘rin","10-o‘rin","12-o‘rin"],1,"Singapur GII reytingida jahonda 5-o‘rinda.",2],
+["Xotira chiplari yetakchisi qaysi davlat?",["Yaponiya","Xitoy","Tayvan","Janubiy Koreya"],3,"Samsung va SK Hynix tufayli xotira chiplari yetakchisi — Janubiy Koreya.",2],
+["Texnologik taraqqiyotning asosiy iqtisodiy mohiyati nima?",["Ishchi kuchi sonini oshirish","O‘sishni miqdoriy omillardan sifat va samaradorlik omillariga o‘tkazish","Xomashyo eksportini ko‘paytirish","Jismoniy kapitalni ko‘paytirish"],1,"O‘sish qo‘shimcha resurs hisobiga emas, sifat va samaradorlik hisobiga ta’minlanadi.",2],
+["AQSH, Xitoy va Yevropa Ittifoqi dunyo bo‘yicha Narsalar internetiga (IoT) sarflanadigan barcha xarajatlarning necha foizini o‘zida jamlagan?",["25%","50%","75%","90%"],2,"Uchlik IoT xarajatlarining to‘rtdan uch qismini jamlagan.",2],
+["Birgina Sharqiy Osiyo mintaqasi xarid qobiliyati pariteti (XQP) bo‘yicha jahon iqtisodiyotining necha foizini tashkil etmoqda?",["12,40%","18,75%","26,15%","41,00%"],2,"Mintaqa YAIMi 58,64 trillion dollar bo‘lib, jahon iqtisodiyotining 26,15% ini tashkil etadi.",2],
+["IMF ning 2026-yil kuzgi prognoziga ko‘ra, O‘zbekistonning 2026-yildagi yalpi ichki mahsulot (YAIM) o‘sish sur’ati necha foizni tashkil etadi?",["5,8%","6,5%","7,4%","7,8%"],3,"IMF prognozi bo‘yicha O‘zbekiston YAIMi 2026-yilda 7,8% ga o‘sadi.",2],
+["Jahon banki ma’lumotlariga ko‘ra, Sharqiy Osiyoda murakkab tahliliy fikrlashni talab qiluvchi va SI bilan to‘g‘ridan-to‘g‘ri uyg‘unlashadigan kasblar ulushi necha foizni tashkil etadi?",["13%","25%","39%","54%"],0,"Sharqiy Osiyoda bu ko‘rsatkich 13% (rivojlangan davlatlarda 39%) — SI tafovuti mavjud.",2],
+["Janubiy Koreya fond birjasi (KOSPI) umumiy kapitallashuvining asosiy qismini qaysi ikkita chip ishlab chiqaruvchi gigant kompaniya tashkil etadi?",["TSMC va Intel","Samsung va SK Hynix","Hyundai va LG","Toyota va Sony"],1,"Samsung va SK Hynix KOSPI kapitallashuvining asosiy qismini tashkil etadi.",2],
+["JSTning 2025-yilgi GVC hisobotiga ko‘ra, Global qiymat zanjirlari jahon savdosining necha foizini tashkil etadi?",["16,3%","26,3%","46,3%","53,7%"],2,"GVC jahon savdosining 46,3% ini tashkil etadi.",2]
+];
+/* 3-variant: 1-variantdan 7 ta (0,2,3,5,8,9,11) va 2-variantdan 5 ta (13,14,17,18,20) savol */
+var V3=[0,2,3,5,8,9,11,13,14,17,18,20];
+var BOT="",CHAT="",t0=0,N=12,T=15,app=document.getElementById("app");
+/* Google Sheets orqali yig‘ish: Apps Script "Web app" havolasini shu yerga qo‘ying (https://script.google.com/macros/s/.../exec) */
+var SHEET="";
+function sendSheet(o){if(!SHEET)return;try{o.sana=new Date().toLocaleString("uz-UZ");fetch(SHEET,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(o),keepalive:true})}catch(e){}}
+function tg(m){if(!BOT||!CHAT)return;try{new Image().src="https://api.telegram.org/bot"+BOT+"/sendMessage?chat_id="+CHAT+"&text="+encodeURIComponent(m+"\n"+new Date().toLocaleString("uz-UZ"))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function shuf(a,r){a=a.slice();for(var j=a.length-1;j>0;j--){var k=Math.floor(r()*(j+1)),t=a[j];a[j]=a[k];a[k]=t}return a}
+var st={},tmr,left,done,idx,ans,ord,leaves=0,running=false;
+document.addEventListener("copy",function(e){if(running)e.preventDefault()});
+document.addEventListener("visibilitychange",function(){if(running&&document.hidden)leaves++});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function home(){
+ try{var l=localStorage.getItem("qz:device2");if(l)return locked(JSON.parse(l))}catch(e){}
+ $("n").textContent="";$("s").textContent="";$("b").style.width="0";
+ app.innerHTML='<div class="card"><p class="q">Testni boshlash</p><p class="sub">'+N+' ta savol · har biri '+T+' soniya · har to‘g‘ri javob = 1 ball</p>'+
+ '<label>Ism va familiyangiz</label><input id="nm" autocomplete="off" placeholder="Masalan: Aliyev Vali">'+
+ '<label>Variant</label><select id="vr"><option value="1">1-variant</option><option value="2">2-variant</option><option value="3">3-variant</option></select>'+
+ '<div class="note">⚠️ Variantni savol tuzuvchi aytgandek tanlang. Savollar va javoblar tartibi har bir talabada tasodifiy aralashadi. Test davomida boshqa oynaga o‘tmang: bu qayd etiladi. Javoblar test tugagach ko‘rsatiladi.</div>'+
+ '<button class="btn" id="go">Boshlash</button></div>';
+ $("go").onclick=begin;
+}
+function begin(){
+ var nm=$("nm").value.trim(),v=+$("vr").value;
+ if(nm.length<3){$("nm").style.borderColor="var(--no)";$("nm").focus();return}
+ st={nm:nm,v:v};
+ try{localStorage.setItem("qz:device2",JSON.stringify({nm:nm,v:v,fin:false}))}catch(e){}
+ ord=[];
+ if(v===3){ord=V3.slice()}else{Q.forEach(function(q,i){if(q[4]===v)ord.push(i)})}
+ ord=shuf(ord,Math.random);
+ ans=[];idx=0;leaves=0;running=true;t0=Date.now();tg("▶️ BOSHLADI | "+st.nm+" | Variant "+st.v);sendSheet({holat:"boshladi",ism:st.nm,variant:st.v,ball:"",jami:N,vaqt:"",chiqish:0});show();
+}
+function show(){
+ if(idx>=N)return finish();
+ done=false;left=T;var qi=ord[idx],q=Q[qi];
+ $("n").textContent="Savol "+(idx+1)+"/"+N;$("b").style.width=(idx/N*100)+"%";$("s").textContent=st.nm;
+ var oo=shuf([0,1,2,3],Math.random),L="ABCD";
+ var h='<div class="card"><div class="tm" id="tm"><div class="tb"><i id="ti"></i></div><div class="tn" id="tn">'+T+'</div></div><p class="q">'+esc(q[0])+'</p>';
+ oo.forEach(function(k,j){h+='<button class="o" data-k="'+k+'"><b>'+L[j]+'</b>'+esc(q[1][k])+'</button>'});
+ app.innerHTML=h+'</div>';
+ app.querySelectorAll(".o").forEach(function(b){b.onclick=function(){pick(+b.dataset.k,b)}});
+ clearInterval(tmr);
+ tmr=setInterval(function(){left=Math.max(0,left-.1);$("ti").style.width=(left/T*100)+"%";$("tn").textContent=Math.ceil(left);if(left<=3)$("tm").classList.add("lo");if(left<=0)pick(-1)},100);
+}
+function pick(k,b){
+ if(done)return;done=true;clearInterval(tmr);ans[idx]=k;
+ if(b)b.classList.add("sel");
+ setTimeout(function(){idx++;show()},k<0?0:350);
+}
+function finish(){running=false;clearInterval(tmr);
+ try{localStorage.setItem("qz:device2",JSON.stringify({nm:st.nm,v:st.v,fin:true,ans:ans,ord:ord,leaves:leaves}))}catch(e){}
+ var s2=0;ord.forEach(function(qi,k){if(ans[k]===Q[qi][2])s2++});tg("✅ TUGATDI | "+st.nm+" | Variant "+st.v+" | Ball: "+s2+"/"+N+" | Vaqt: "+Math.round((Date.now()-t0)/1000)+" s | Oynadan chiqish: "+leaves);
+ sendSheet({holat:"tugatdi",ism:st.nm,variant:st.v,ball:s2,jami:N,vaqt:Math.round((Date.now()-t0)/1000),chiqish:leaves});
+ result(ans,ord,leaves,false);
+}
+function result(a,o,lv,again){
+ $("b").style.width="100%";$("n").textContent="Yakun";$("s").textContent="";
+ var sc=0,rv="";
+ o.forEach(function(qi,k){var q=Q[qi];if(a[k]===q[2])sc++;else rv+='<div class="rv"><b>'+(k+1)+'. '+esc(q[0])+'</b><br><span class="x">Sizning javobingiz: '+(a[k]>=0?esc(q[1][a[k]]):"javob berilmagan")+'</span><br><span class="y">To‘g‘ri javob: '+esc(q[1][q[2]])+'</span><br>💡 '+esc(q[3])+'</div>'});
+ var pc=Math.round(sc/N*100);
+ var txt=st.nm+" | Variant "+st.v+" | Ball: "+sc+"/"+N+" ("+pc+"%) | Oynadan chiqishlar: "+lv;
+ app.innerHTML='<div class="card c"><div class="big">'+sc+' / '+N+'</div><p class="q">'+pc+'% · '+esc(st.nm)+'</p>'+(again?'<div class="sub">Siz bu testni avval topshirgansiz.</div>':'')+
+ '<div class="cp" id="tx">'+esc(txt)+'</div><button class="btn" id="cb">Natijani nusxalash</button>'+'<a class="btn" style="display:block;text-align:center;text-decoration:none" href="https://t.me/share/url?url=%20&text='+encodeURIComponent(txt)+'" target="_blank" rel="noopener">Telegramda yuborish</a>'+
+ (rv?'<p class="q" style="margin-top:20px;text-align:left">Xatolar tahlili</p>'+rv:'<p class="q" style="margin-top:16px">🏆 Xatosiz!</p>')+'</div>';
+ $("cb").onclick=function(){var ok=false;try{var t=document.createElement("textarea");t.value=txt;t.style.position="fixed";t.style.opacity="0";document.body.appendChild(t);t.focus();t.select();t.setSelectionRange(0,9999);ok=document.execCommand("copy");document.body.removeChild(t)}catch(e){}
+ if(ok){$("cb").textContent="✅ Nusxalandi"}else{try{navigator.clipboard.writeText(txt).then(function(){$("cb").textContent="✅ Nusxalandi"},function(){sel()});}catch(e){sel()}}};
+ function sel(){var r=document.createRange();r.selectNodeContents($("tx"));var g=getSelection();g.removeAllRanges();g.addRange(r);$("cb").textContent="Matnni ushlab turib nusxalang yoki skrinshot oling"}
+}
+function locked(d){
+ $("n").textContent="";$("s").textContent="";$("b").style.width="100%";
+ if(d.fin){st={nm:d.nm,v:d.v};tg("🔁 QAYTA KIRDI (avval topshirgan) | "+d.nm+" | Variant "+d.v);return result(d.ans,d.ord,d.leaves,true)}
+ tg("⛔ TUGALLANMAGAN TESTNI QAYTA OCHDI | "+d.nm+" | Variant "+d.v);
+ app.innerHTML='<div class="card c"><p class="q">⛔ Test avval boshlangan</p><p class="sub">Testni faqat bir marta topshirish mumkin. Bu qurilmada test boshlangan, lekin tugallanmagan. Qayta boshlab bo‘lmaydi — savol tuzuvchiga murojaat qiling.</p></div>';
+}
+home();
+</script></body></html>
